@@ -7,17 +7,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
-  },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
-  { path: 'villes',
-   loadChildren: './villes/villes.module#VillesPageModule'
-   }
+  {path: 'home',loadChildren: './home/home.module#HomePageModule' },
+  { path: 'list',loadChildren: './list/list.module#ListPageModule' },
+  { path: 'villes',loadChildren: './villes/villes.module#VillesPageModule' },
+  { path: 'select-ville', loadChildren: './select-ville/select-ville.module#SelectVillePageModule' },
+  { path: 'insert-ville', loadChildren: './insert-ville/insert-ville.module#InsertVillePageModule' }
 ];
 
 @NgModule({

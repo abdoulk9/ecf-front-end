@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Affichage d'une ville</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-list>
+   <ion-item>
+     <ion-label position="floating">Id de la ville:</ion-label>
+     <ion-input type="number"  [(ngModel)]="idTown"></ion-input>
+   </ion-item>
+ 
+
+ 
+   <ion-item  *ngFor="let item of dataTowns">
+     <ion-grid>
+       <ion-row>
+         <ion-col >
+              {{item.ville}} | {{item.pays}}
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </ion-item>
+
+ </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="secondary" expand="block" type="submit" (click)="validateId(idTown)">Afficher</ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -20,7 +20,19 @@ export class AppComponent {
       title:'Villes',
       url:'/villes',
       icon:'list'
+    },
+    {
+      title:'Afficher une ville',
+      url:'/select-ville',
+      icon:'checkmark'
+    },
+
+    {
+      title:'Ajouter une ville',
+      url:'/insert-ville',
+      icon:'add-circle'
     }
+
     // {
     //   title: 'List',
     //   url: '/list',

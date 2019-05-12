@@ -21,7 +21,7 @@ export class VillesPage implements OnInit {
   }
 
 
-  //Generation d'une liste des villes
+  //Generation de la  liste des villes
   ionViewDidEnter() {
     console.log("Falg1");
     this.httpClient.get("http://localhost:4000/villes")
