@@ -26,30 +26,29 @@ export class SelectVillePage implements OnInit {
   ngOnInit() {
   }
 
- 
-
 
   validateId(id) {
     console.log(" voici l'id:" + id);
     if (id > 0) {
-   this.httpClient.get("http://localhost:4000/ville/" + id)
+      this.httpClient.get("http://localhost:4000/ville/" + id)
         .subscribe(
-                  (data: any) => {
-                  console.log(data);
-                if (data.success) {
-                                   this.dataTown.push(data)
-                                  console.log(this.dataTown);
-                                }
-                                  err => console.log(err)
-        
-      console.log("n° 2" + this.dataTown);
-    })
-  }}
+          (data: any) => {
+            console.log(data)
+            if (data) {
+              this.dataTown = data;
+              console.log(this.dataTown);
+            }
+            err => console.log(err)
+
+            console.log(this.dataTown);
+          })
+    }
+  }
 
 
 
   ionViewDidEnter() {
-    this.httpClient.get("http://localhost:4000/ville/"+this.idTown)
+    this.httpClient.get("http://localhost:4000/ville/" + this.idTown)
       .subscribe(
         (dataTown: any) => {
           this.dataTowns = dataTown;
@@ -61,37 +60,5 @@ export class SelectVillePage implements OnInit {
 
 
 
-
-
-
-
-
-
-
-  // validateId(id) {
-  //   console.log(" voici l'id:" + id);
-  //   if (id > 0) {
-  //     this.httpClient.get("http://localhost:4000/ville/" + id)
-  //       .subscribe(
-  //         (data: any) => {
-  //           console.log(data);
-  //           if (data.success) {
-  //             this.dataTown.push(data),
-  //               err => console.log(err)
-  //             console.log(this.dataTown);
-  //           } else { // id vide
-  //             let myToast = this.toater.create(
-  //               {
-  //                 message: "Cet id n'existe pas !",
-  //                 color: "danger",
-  //                 duration: 3000,
-  //                 position: 'middle'
-  //               }).then((toast) => toast.present())
-  //           }
-                  
-  //                             )
-  //     console.log("n° 2" + this.dataTown);
-  //   }
-  // }
 
 }

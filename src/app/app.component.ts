@@ -31,6 +31,16 @@ export class AppComponent {
       title:'Ajouter une ville',
       url:'/insert-ville',
       icon:'add-circle'
+    },
+    {
+      title:'Supprimer une ville',
+      url:'/delete-ville',
+      icon:'md-trash'
+    },
+    {
+      title:'Modification de la ville',
+      url:'/update-ville',
+      icon:'refresh'
     }
 
     // {

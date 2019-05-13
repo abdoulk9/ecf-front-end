@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update-ville</ion-title>
+
+    <ion-buttons>
+      <ion-back-button slot="start" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+  <ion-item>
+      <ion-label>Entrez l'id de la ville:</ion-label>
+      <ion-input type="number" [(ngModel)]="idUpdate"></ion-input>
+  </ion-item>
+</ion-list>
+
+
+   <ion-toolbar>
+  <ion-button color="secondary" expand="block"  type="submit" (click)="validateUpdate(idUpdate)">UPDATE</ion-button>
+</ion-toolbar>
+</ion-content>
